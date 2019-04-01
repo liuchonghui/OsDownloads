@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import tools.android.osdownloads.DownLoadManager;
+
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                DownLoadManager.download(getApplicationContext(), "", "", "", "", "", false, "");
             }
         });
     }
