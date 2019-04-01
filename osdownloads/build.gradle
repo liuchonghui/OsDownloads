@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayName = 'osdownloads'
+    artifact = bintrayName
+    libraryName = 'OsDownloads'
+    libraryDescription = 'A DownloadManager modified with AndroidOs-DownloadManager'
+	libraryVersion = serial_compiler_version
+}
+
+compileJava {
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
+
