@@ -1,6 +1,19 @@
 buildscript {
     //ext.kotlin_version = '1.2.71'
 
+    ext.buildConfig = [
+            'compileSdkVersion': 28,
+            'buildToolsVersion': '28.0.3',
+            'supportLibVersion': '28.0.0',
+            'minSdkVersion'    : 14,
+            'targetSdkVersion' : 28,
+    ]
+
+    ext.buildVersion = [
+            'versionCode': 2,
+            'versionName': '0.1.0',
+    ]
+
     repositories {
         mavenCentral()
         jcenter()

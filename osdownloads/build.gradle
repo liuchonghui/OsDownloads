@@ -5,22 +5,22 @@ ext {
     artifact = bintrayName
     libraryName = 'OsDownloads'
     libraryDescription = 'A DownloadManager modified with AndroidOs-DownloadManager'
-    libraryCode = osdownloads_code
-	libraryVersion = osdownloads_version
+    libraryCode = buildVersion.versionCode
+    libraryVersion = buildVersion.versionName
 }
 
 android {
 
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion buildConfig.compileSdkVersion
+    buildToolsVersion buildConfig.buildToolsVersion
 
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 28
-        versionCode 1
-        versionName "0.0.1"
+        minSdkVersion buildConfig.minSdkVersion
+        targetSdkVersion buildConfig.targetSdkVersion
+        versionCode libraryCode
+        versionName libraryVersion
     }
 
     buildTypes {
@@ -33,7 +33,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:appcompat-v7:${buildConfig.supportLibVersion}"
 }
 
 apply from: '../install.gradle'
