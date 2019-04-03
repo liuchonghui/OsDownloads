@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion buildConfig.compileSdkVersion
     defaultConfig {
         applicationId "test.android.osdownloads"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion buildConfig.minSdkVersion
+        targetSdkVersion buildConfig.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -26,7 +26,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':osdownloads')
-    implementation "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+//    implementation project(':osdownloads')
+    implementation 'tools.android:osdownloads:0.1.0'
+    implementation "com.android.support:appcompat-v7:${buildConfig.supportLibVersion}"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
