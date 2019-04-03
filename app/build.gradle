@@ -27,7 +27,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 //    implementation project(':osdownloads')
-    implementation 'tools.android:osdownloads:0.1.0'
-    implementation "com.android.support:appcompat-v7:${buildConfig.supportLibVersion}"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'tools.android:osdownloads:0.0.1-androidx'
+    implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
+    implementation "com.google.android.material:material:${versions.androidx.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.androidx.constraint_layout}"
 }

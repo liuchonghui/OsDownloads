@@ -7,7 +7,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 

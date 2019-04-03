@@ -4,7 +4,7 @@ ext {
     bintrayName = 'osdownloads'
     artifact = bintrayName
     libraryName = 'OsDownloads'
-    libraryDescription = 'A DownloadManager modified with AndroidOs-DownloadManager'
+    libraryDescription = 'A DownloadManager modified with AndroidX-DownloadManager'
     libraryCode = buildVersion.versionCode
     libraryVersion = buildVersion.versionName
 }
@@ -33,7 +33,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.android.support:appcompat-v7:${buildConfig.supportLibVersion}"
+    implementation "androidx.appcompat:appcompat:${versions.androidx.appcompat}"
+    implementation "com.google.android.material:material:${versions.androidx.material}"
 }
 
 apply from: '../install.gradle'
