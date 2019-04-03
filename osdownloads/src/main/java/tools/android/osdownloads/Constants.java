@@ -49,9 +49,9 @@ public class Constants {
     public static final int RETRY_FIRST_DELAY = 30;
     public static final String UID = "uid";
 
-    public static final String AUTHORITY = "tv.zhenjing.vitamin.download";
+    public static final String AUTHORITY = "tools.android.osdownloads";
 
-    public static final String TAG = "VTDownloadManager";
+    public static final String TAG = "OSDownloadManager";
     public static final boolean LOGV = BuildConfig.DEBUG;
 
 }

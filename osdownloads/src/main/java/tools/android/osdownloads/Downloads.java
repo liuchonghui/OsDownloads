@@ -12,7 +12,7 @@ import android.provider.BaseColumns;
 import android.text.TextUtils;
 
 public final class Downloads implements BaseColumns {
-	public static final String AUTHORITIES = "vtdownloads";
+	public static final String AUTHORITIES = "osdownloads";
 	public static final String COLUMN_APP_DATA = "entity";
 	public static final String COLUMN_CONTROL = "control"; // 开始 暂停
 	public static final String COLUMN_COOKIE_DATA = "cookiedata";

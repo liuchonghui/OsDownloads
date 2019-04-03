@@ -32,15 +32,15 @@ import android.util.Log;
 
 public class DownloadProvider extends ContentProvider {
     private static final String DB_NAME = "downloads.db";
-    private static final String TABLE_NAME = "vt_downloads";
+    private static final String TABLE_NAME = "os_downloads";
     private static final int DOWNLOADS = 1;
     private static final int DOWNLOADS_ID = 2;
     private static final int DB_VERSION = 10;
 
     private static final int DB_VERSION_UPGRADE = 10;
 
-    private static final String DOWNLOAD_LIST_TYPE = "vnd.android.cursor.dir/vtdownlods";
-    private static final String DOWNLOAD_TYPE = "vnd.android.cursor.item/vtdownloads";
+    private static final String DOWNLOAD_LIST_TYPE = "vnd.android.cursor.dir/osdownlods";
+    private static final String DOWNLOAD_TYPE = "vnd.android.cursor.item/osdownloads";
     private static final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     private SQLiteOpenHelper mOpenHelper = null;
